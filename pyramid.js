@@ -1,16 +1,13 @@
-var button = document.querySelector("button");
-button.addEventListener("click", function() {
-    var height = parseInt(document.getElementById("height").value);
-    var symbol = document.getElementById("symbol").value;
-    drawPyramid(height, symbol);
-});
+document.querySelector("select").addEventListener("change", drawPyramid);
+document.querySelector("input").addEventListener("input", drawPyramid);
 
- function drawPyramid(height, symbol) {
-     var prgh = document.getElementsByClassName("pyrmd");
-     var pyramid = document.getElementById("pyramid");
-     while (prgh.length > 0) {
-        pyramid.removeChild(prgh[0]);
-     }
+function drawPyramid() {
+ 	var height = parseInt(document.getElementById("height").value);
+    var symbol = document.getElementById("symbol").value;
+    var pyramid = document.getElementById("pyramid");
+
+    document.getElementById("disp").innerHTML = height;
+    removeRows(document.getElementsByClassName("pyrmd"),pyramid)
      
      for (var i=0;i<height;i++) {
          var row = "";
@@ -29,3 +26,13 @@ button.addEventListener("click", function() {
         pyramid.appendChild(rowElem);
     }
 }
+
+var removeRows = function(rows,parent) {
+     for (var i=rows.length;i>0;i--) {
+        parent.removeChild(rows[i-1]);//counting up only removes half the lines
+     }
+};
+
+var createRow = function() {
+
+};

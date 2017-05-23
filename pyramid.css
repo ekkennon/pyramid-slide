@@ -1,0 +1,27 @@
+body {
+	background-color: #EEEEEE;
+}
+
+table {
+	margin: 0 auto;
+	width: 50%;
+	background-color: #BBBBBB;
+}
+
+.symbol {
+	width: 16%;
+}
+
+.height {
+	width: 14%;
+}
+
+.space {
+	width: 26%;
+}
+
+#pyramid {
+	width: 20%;
+	margin: 0 auto;
+	color: #AA22AA;
+}

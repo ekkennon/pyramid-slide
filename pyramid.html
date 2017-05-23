@@ -2,20 +2,37 @@
 <html>
 	<head>
 		<title>Pyramid</title>
-		<meta charset="utf-8">
+		<meta charset="utf-8"/>
+
+		<style type="text/css"></style>
+		<link href="pyramid.css" rel="stylesheet" type="text/css"/>
 	</head>
 	<body>
-		<label>Brick Symbol<select id="symbol">
-			<option>#</option>
-			<option>+</option>
-			<option>$</option>
-			<option>@</option>
-			<option>X</option>
-		</select></label>
-
-		<label>How High?<input id="height" type="range" min="2" max="20" /></label>
-
-		<button>Make It!</button>
+		<table><tr>
+			<td class="symbol">
+				<label>Brick Symbol</label>
+			</td>
+			<td class="symbol">
+				<select id="symbol">
+					<option>#</option>
+					<option>+</option>
+					<option>$</option>
+					<option>@</option>
+					<option>X</option>
+				</select>
+			</td>
+			<td class="space">
+			</td>
+			<td class="height">
+				<label>How High?</label>
+			</td>
+			<td class="height">
+				<input id="height" type="range" min="2" max="20" />
+			</td>
+			<td class="height">
+				<label id="disp"></label>
+			</td>
+		</tr></table>
 		
 		<div id="pyramid">
 		</div>
